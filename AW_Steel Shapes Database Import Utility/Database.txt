@@ -1,0 +1,2 @@
+key	organization	edition	backgroundColor	textColor	designMethodology
+AISC_LRFD_14	AISC	14	Red	Gold	LRFD

@@ -1,0 +1,16 @@
+Database Key	key	displayName	symbol	defaultOrder		
+AISC_LRFD_14	W	W Shapes	W	1		
+AISC_LRFD_14	M	M Shapes	M	2		
+AISC_LRFD_14	S	S Shapes	S	3		
+AISC_LRFD_14	HP	HP Shapes	HP	4		
+AISC_LRFD_14	C	C Shapes	C	5		
+AISC_LRFD_14	MC	MC Shapes	MC	6		
+AISC_LRFD_14	L	Angles	L	7		
+AISC_LRFD_14	WT	WT Shapes	WT	8		
+AISC_LRFD_14	MT	MT Shapes	MT	9		
+AISC_LRFD_14	ST	ST Shapes	ST	10		
+AISC_LRFD_14	HSSRect	Rectangular HSS	HSSRect	11		
+AISC_LRFD_14	HSSSquare	Square HSS	HSSSquare	12		
+AISC_LRFD_14	HSSRound	Round HSS	HSSRound	13		
+AISC_LRFD_14	PIPE	Pipe	PIPE	14		
+AISC_LRFD_14	2L	Double Angles	2L	15		
