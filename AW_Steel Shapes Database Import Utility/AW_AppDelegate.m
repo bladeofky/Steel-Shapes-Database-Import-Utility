@@ -12,26 +12,11 @@
 #import "AW_Shape.h"
 #import "AW_Property.h"
 
-@interface AW_AppDelegate ()
-
-@property (nonatomic, strong) NSMutableDictionary *databaseIndex;
-
-@end
-
 @implementation AW_AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-
-- (NSMutableDictionary *)databaseIndex
-{
-    if (!_databaseIndex) {
-        _databaseIndex = [[NSMutableDictionary alloc] init];
-    }
-    
-    return _databaseIndex;
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
