@@ -125,6 +125,10 @@ forManagedObjectWithName:(NSString *) nameOfObject
     for (int col = 0; col < [attributeNames count]; col++) {
         
         NSString *attributeName = attributeNames[col];
+        
+        // Sanitize attributeName
+        attributeName = [attributeName stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        
         NSAttributeDescription *attribute = [entityAttributes objectForKey:attributeName];
         NSString *attributeClass = [attribute attributeValueClassName];
         NSString *value = fields[col];
@@ -151,17 +155,22 @@ forManagedObjectWithName:(NSString *) nameOfObject
                 UIColor *color;
                 
                 if ([value isEqualToString:@"Red"]) {
-                    color = [UIColor colorWithRed:102 green:0 blue:0 alpha:1.0];
+                    color = [UIColor colorWithRed:0.5 green:0 blue:0 alpha:1.0];
                 }
                 else if ([value isEqualToString:@"Gold"]) {
-                    color = [UIColor colorWithRed:255 green:255 blue:0 alpha:1.0];
+                    color = [UIColor colorWithRed:1 green:1 blue:0 alpha:1.0];
                 } // end else if
+                
+                // UIColor is NSCoding compliant. NSKeyedUnarchiveFromDataTransformerName is used by default.
+                [entry setValue:color forKeyPath:attributeName];
+                
+#warning TO-DO: Transform UIColor to NSData and add it to the managed object
             } //end if
         } //end else
         
     } //end for
     
-    NSLog(@"Created object: %@", entry);
+    //NSLog(@"Created object: %@", entry);
     
     // Save the managed object context
     NSError *error = nil;
@@ -204,6 +213,8 @@ forManagedObjectWithName:(NSString *) nameOfObject
     for (int col = 1; col < [attributeNames count]; col++) {
         
         NSString *attributeName = attributeNames[col];
+        attributeName = [attributeName stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];   // Sanitize attributeName
+        
         NSAttributeDescription *attribute = [entityAttributes objectForKey:attributeName];
         NSString *attributeClass = [attribute attributeValueClassName];
         NSString *value = fields[col];
@@ -229,7 +240,7 @@ forManagedObjectWithName:(NSString *) nameOfObject
         
     } //end for
     
-    NSLog(@"Created object: %@", entry);
+    //NSLog(@"Created object: %@", entry);
     
     // Save the managed object context
     if (![self.managedObjectContext save:&error]) {
@@ -278,6 +289,8 @@ forManagedObjectWithName:(NSString *) nameOfObject
     for (int col = FIRST_ATTRIBUTE_INDEX; col < FIRST_PROPERTY_INDEX; col++) {
         
         NSString *attributeName = attributeNames[col];
+        attributeName = [attributeName stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];   // Sanitize attributeName
+        
         NSAttributeDescription *attribute = [entityAttributes objectForKey:attributeName];
         NSString *attributeClass = [attribute attributeValueClassName];
         NSString *value = fields[col];
@@ -308,6 +321,8 @@ forManagedObjectWithName:(NSString *) nameOfObject
     
     for (int col = FIRST_PROPERTY_INDEX; col < [attributeNames count]; col+=2) {
         NSString *propertyKey = [attributeNames[col] stringByReplacingOccurrencesOfString:@"imp_" withString:@""];
+        propertyKey = [propertyKey stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];   // Sanitize propertyKey
+        
         NSString *impValue = fields[col];
         NSString *metValue = fields[col+1];
         
@@ -320,7 +335,7 @@ forManagedObjectWithName:(NSString *) nameOfObject
         
     }
     
-    NSLog(@"Created object: %@", entry);
+    //NSLog(@"Created object: %@", entry);
     
     // Save the managed object context
     if (![self.managedObjectContext save:&error]) {

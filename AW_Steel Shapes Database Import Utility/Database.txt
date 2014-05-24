@@ -1,2 +1,2 @@
-key	organization	edition	backgroundColor	textColor	designMethodology
-AISC_LRFD_14	AISC	14	Red	Gold	LRFD
+key	organization	edition	backgroundColor	textColor	designMethodology	longName	shortName
+AISC_LRFD_14	AISC	14th	Red	Gold	LRFD	AISC 14th Edition	AISC 14 Ed.
