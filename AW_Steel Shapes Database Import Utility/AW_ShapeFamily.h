@@ -18,6 +18,7 @@
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) NSString *key;
 @property (nonatomic, strong) NSString *symbol;
+@property (nonatomic, strong) NSString *group;
 @property (nonatomic, strong) AW_Database *database;
 @property (nonatomic, strong) NSSet *shapes;
 @end

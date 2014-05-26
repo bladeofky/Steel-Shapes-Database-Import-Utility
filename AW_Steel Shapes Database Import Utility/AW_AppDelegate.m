@@ -218,6 +218,7 @@ forManagedObjectWithName:(NSString *) nameOfObject
         NSAttributeDescription *attribute = [entityAttributes objectForKey:attributeName];
         NSString *attributeClass = [attribute attributeValueClassName];
         NSString *value = fields[col];
+        value = [value stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];   // Sanitize value
         
         // Skip blank field
         if ([value isEqualToString:@""]) {
@@ -285,7 +286,7 @@ forManagedObjectWithName:(NSString *) nameOfObject
     
     // Set attributes
     int FIRST_ATTRIBUTE_INDEX = 2;
-    int FIRST_PROPERTY_INDEX = 8;
+    int FIRST_PROPERTY_INDEX = 10;
     for (int col = FIRST_ATTRIBUTE_INDEX; col < FIRST_PROPERTY_INDEX; col++) {
         
         NSString *attributeName = attributeNames[col];

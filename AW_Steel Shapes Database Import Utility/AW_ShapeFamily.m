@@ -18,6 +18,7 @@
 @dynamic image;
 @dynamic key;
 @dynamic symbol;
+@dynamic group;
 @dynamic database;
 @dynamic shapes;
 

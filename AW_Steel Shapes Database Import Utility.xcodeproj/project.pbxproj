@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E7B1B2E21931312400054276 /* Database.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7B1B2E11931312400054276 /* Database.txt */; };
+		E7B1B2FC1933D8F500054276 /* Shape Family.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7B1B2FA1933D8F500054276 /* Shape Family.txt */; };
+		E7B1B2FD1933D8F500054276 /* Shapes.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7B1B2FB1933D8F500054276 /* Shapes.txt */; };
 		E7EEF10919205AF70075D69B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EEF10819205AF70075D69B /* Foundation.framework */; };
 		E7EEF10B19205AF70075D69B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EEF10A19205AF70075D69B /* CoreGraphics.framework */; };
 		E7EEF10D19205AF70075D69B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EEF10C19205AF70075D69B /* UIKit.framework */; };
@@ -27,9 +29,7 @@
 		E7EEF15B19205FB60075D69B /* AW_Property.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EEF15A19205FB60075D69B /* AW_Property.m */; };
 		E7EEF15E19205FB60075D69B /* AW_Database.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EEF15D19205FB60075D69B /* AW_Database.m */; };
 		E7EEF16119205FB70075D69B /* AW_ShapeFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EEF16019205FB60075D69B /* AW_ShapeFamily.m */; };
-		E7EEF1761924272D0075D69B /* Shape Family.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7EEF1751924272C0075D69B /* Shape Family.txt */; };
 		E7EEF179192449910075D69B /* Properties.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7EEF177192449910075D69B /* Properties.txt */; };
-		E7EEF17A192449910075D69B /* Shapes.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7EEF178192449910075D69B /* Shapes.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		E7B1B2E11931312400054276 /* Database.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Database.txt; sourceTree = "<group>"; };
+		E7B1B2FA1933D8F500054276 /* Shape Family.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Shape Family.txt"; sourceTree = "<group>"; };
+		E7B1B2FB1933D8F500054276 /* Shapes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Shapes.txt; sourceTree = "<group>"; };
 		E7EEF10519205AF70075D69B /* AW_Steel Shapes Database Import Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AW_Steel Shapes Database Import Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EEF10819205AF70075D69B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E7EEF10A19205AF70075D69B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,9 +72,7 @@
 		E7EEF15D19205FB60075D69B /* AW_Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AW_Database.m; sourceTree = "<group>"; };
 		E7EEF15F19205FB60075D69B /* AW_ShapeFamily.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AW_ShapeFamily.h; sourceTree = "<group>"; };
 		E7EEF16019205FB60075D69B /* AW_ShapeFamily.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AW_ShapeFamily.m; sourceTree = "<group>"; };
-		E7EEF1751924272C0075D69B /* Shape Family.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Shape Family.txt"; sourceTree = "<group>"; };
 		E7EEF177192449910075D69B /* Properties.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Properties.txt; sourceTree = "<group>"; };
-		E7EEF178192449910075D69B /* Shapes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Shapes.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				E7B1B2E11931312400054276 /* Database.txt */,
-				E7EEF1751924272C0075D69B /* Shape Family.txt */,
-				E7EEF178192449910075D69B /* Shapes.txt */,
+				E7B1B2FA1933D8F500054276 /* Shape Family.txt */,
+				E7B1B2FB1933D8F500054276 /* Shapes.txt */,
 				E7EEF177192449910075D69B /* Properties.txt */,
 			);
 			name = "Files for Import";
@@ -278,8 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7EEF179192449910075D69B /* Properties.txt in Resources */,
-				E7EEF17A192449910075D69B /* Shapes.txt in Resources */,
-				E7EEF1761924272D0075D69B /* Shape Family.txt in Resources */,
+				E7B1B2FC1933D8F500054276 /* Shape Family.txt in Resources */,
+				E7B1B2FD1933D8F500054276 /* Shapes.txt in Resources */,
 				E7B1B2E21931312400054276 /* Database.txt in Resources */,
 				E7EEF11519205AF70075D69B /* InfoPlist.strings in Resources */,
 				E7EEF12019205AF70075D69B /* Images.xcassets in Resources */,
