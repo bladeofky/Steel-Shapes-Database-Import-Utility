@@ -379,8 +379,9 @@ forManagedObjectWithName:(NSString *) nameOfObject
     }
     
     // Set property value
-    [entry setValue:[[NSDecimalNumber alloc] initWithString:impValue] forKeyPath:@"imp_value"];
-    [entry setValue:[[NSDecimalNumber alloc] initWithString:metValue] forKeyPath:@"met_value"];
+    [entry setValue:[[NSDecimalNumber alloc]initWithString:impValue] forKeyPath:@"imp_value"];
+    [entry setValue:[[NSDecimalNumber alloc]initWithString:metValue] forKeyPath:@"met_value"];
+
     
     // Set shape
     entry.shape = shape;
@@ -424,6 +425,8 @@ forManagedObjectWithName:(NSString *) nameOfObject
     
     return [propertyDictionary copy];
 }
+
+
 
 #pragma mark -
 
