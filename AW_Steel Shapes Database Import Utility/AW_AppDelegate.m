@@ -36,7 +36,9 @@
     [self processTextFile:filePath forManagedObjectWithName:@"AW_ShapeFamily"];
     
     // IMPORT SHAPE OBJECTS
-    filePath = [[NSBundle mainBundle] pathForResource:@"Shapes" ofType:@"txt"];
+    filePath = [[NSBundle mainBundle] pathForResource:@"Shapes14" ofType:@"txt"];
+    [self processTextFile:filePath forManagedObjectWithName:@"AW_Shape"];
+    filePath = [[NSBundle mainBundle] pathForResource:@"Shapes13" ofType:@"txt"];
     [self processTextFile:filePath forManagedObjectWithName:@"AW_Shape"];
     
     
@@ -156,6 +158,9 @@ forManagedObjectWithName:(NSString *) nameOfObject
                 
                 if ([value isEqualToString:@"Red"]) {
                     color = [UIColor colorWithRed:0.5 green:0 blue:0 alpha:1.0];
+                }
+                else if ([value isEqualToString:@"Black"]) {
+                    color = [UIColor blackColor];
                 }
                 else if ([value isEqualToString:@"Gold"]) {
                     color = [UIColor colorWithRed:1 green:1 blue:0 alpha:1.0];
@@ -360,18 +365,20 @@ forManagedObjectWithName:(NSString *) nameOfObject
     for (int index = 0; index < [propertyAttributes count]; index++) {
         
         NSString *value = propertyValues[index];
-        NSAttributeDescription *attributeDescription = [entityAttributes objectForKey:propertyAttributes[index]];
+        NSString *propertyAttributeKey = propertyAttributes[index];
+        propertyAttributeKey = [propertyAttributeKey stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]]; // Sanitize key
+        NSAttributeDescription *attributeDescription = [entityAttributes objectForKey:propertyAttributeKey];
         NSString *attributeClass = [attributeDescription attributeValueClassName];
         
         // Add field to entry
         if ([attributeClass isEqualToString:@"NSNumber"]) {
-            [entry setValue:[NSNumber numberWithInt:[value intValue]] forKey:propertyAttributes[index]];
+            [entry setValue:[NSNumber numberWithInt:[value intValue]] forKey:propertyAttributeKey];
         }
         else if ([attributeClass isEqualToString:@"NSDecimalNumber"]) {
-            [entry setValue:[[NSDecimalNumber alloc] initWithString:value] forKey:propertyAttributes[index]];
+            [entry setValue:[[NSDecimalNumber alloc] initWithString:value] forKey:propertyAttributeKey];
         }
         else if ([attributeClass isEqualToString:@"NSString"]) {
-            [entry setValue:value forKey:propertyAttributes[index]];
+            [entry setValue:value forKey:propertyAttributeKey];
         }
         else {
             // This is the transformable type. Special processing is required.
@@ -418,7 +425,7 @@ forManagedObjectWithName:(NSString *) nameOfObject
         
         line = lines[row];
         attributes = [line componentsSeparatedByString:@"\t"];
-        key = attributes[0];
+        key = attributes[[propertyDictionary[@"header"]indexOfObject:@"key"]];
         
         [propertyDictionary setObject:attributes forKey:key];
     } //end for
