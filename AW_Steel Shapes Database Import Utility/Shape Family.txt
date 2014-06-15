@@ -29,3 +29,18 @@ AISC_LRFD_13	HSSSquare	Square HSS	HSSSquare	12	rectShape
 AISC_LRFD_13	HSSRound	Round HSS	HSSRound	13	roundShape
 AISC_LRFD_13	PIPE	Pipe	PIPE	14	roundShape
 AISC_LRFD_13	2L	Double Angles	2L	15	Lshape
+AISC_LRFD_3	W	W Shapes	W	1	Ishape
+AISC_LRFD_3	M	M Shapes	M	2	Ishape
+AISC_LRFD_3	S	S Shapes	S	3	Ishape
+AISC_LRFD_3	HP	HP Shapes	HP	4	Ishape
+AISC_LRFD_3	C	C Shapes	C	5	Cshape
+AISC_LRFD_3	MC	MC Shapes	MC	6	Cshape
+AISC_LRFD_3	L	Angles	L	7	Lshape
+AISC_LRFD_3	WT	WT Shapes	WT	8	Tshape
+AISC_LRFD_3	MT	MT Shapes	MT	9	Tshape
+AISC_LRFD_3	ST	ST Shapes	ST	10	Tshape
+AISC_LRFD_3	HSSRect	Rectangular HSS	HSSRect	11	rectShape
+AISC_LRFD_3	HSSSquare	Square HSS	HSSSquare	12	rectShape
+AISC_LRFD_3	HSSRound	Round HSS	HSSRound	13	roundShape
+AISC_LRFD_3	PIPE	Pipe	PIPE	14	roundShape
+AISC_LRFD_3	2L	Double Angles	2L	15	Lshape

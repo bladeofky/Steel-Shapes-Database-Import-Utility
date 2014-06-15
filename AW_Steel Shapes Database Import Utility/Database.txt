@@ -1,3 +1,4 @@
 key	organization	edition	backgroundColor	textColor	designMethodology	longName	shortName
-AISC_LRFD_14	AISC	14th	Red	Gold	LRFD	AISC 14th Edition	AISC 14 Ed.
-AISC_LRFD_13	AISC	13th	Black	Gold	LRFD	AISC 13th Edition	AISC 13 Ed.
+AISC_LRFD_14	AISC	14th	Maroon	Gold	LRFD	AISC 14th Edition	AISC 14th Ed.
+AISC_LRFD_13	AISC	13th	Black	Gold	LRFD	AISC 13th Edition	AISC 13th Ed.
+AISC_LRFD_3	AISC	3rd	Dark Blue	White	LRFD	AISC LRFD 3rd Edition	AISC LRFD 3

@@ -40,6 +40,8 @@
     [self processTextFile:filePath forManagedObjectWithName:@"AW_Shape"];
     filePath = [[NSBundle mainBundle] pathForResource:@"Shapes13" ofType:@"txt"];
     [self processTextFile:filePath forManagedObjectWithName:@"AW_Shape"];
+    filePath = [[NSBundle mainBundle] pathForResource:@"ShapesLRFD3" ofType:@"txt"];
+    [self processTextFile:filePath forManagedObjectWithName:@"AW_Shape"];
     
     
     // --------------------------------------------------------------
@@ -156,11 +158,17 @@ forManagedObjectWithName:(NSString *) nameOfObject
                 // This is a UIColor attribute for the AW_Database entity
                 UIColor *color;
                 
-                if ([value isEqualToString:@"Red"]) {
+                if ([value isEqualToString:@"Maroon"]) {
                     color = [UIColor colorWithRed:0.5 green:0 blue:0 alpha:1.0];
+                }
+                else if ([value isEqualToString:@"Dark Blue"]) {
+                    color = [UIColor colorWithRed:0/255.0f green:58/255.0f blue:169/255.0f alpha:1.0f];
                 }
                 else if ([value isEqualToString:@"Black"]) {
                     color = [UIColor blackColor];
+                }
+                else if ([value isEqualToString:@"White"]) {
+                    color = [UIColor whiteColor];
                 }
                 else if ([value isEqualToString:@"Gold"]) {
                     color = [UIColor colorWithRed:1 green:1 blue:0 alpha:1.0];
@@ -169,7 +177,6 @@ forManagedObjectWithName:(NSString *) nameOfObject
                 // UIColor is NSCoding compliant. NSKeyedUnarchiveFromDataTransformerName is used by default.
                 [entry setValue:color forKeyPath:attributeName];
                 
-#warning TO-DO: Transform UIColor to NSData and add it to the managed object
             } //end if
         } //end else
         
