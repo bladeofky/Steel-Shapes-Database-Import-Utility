@@ -1,0 +1,177 @@
+key	symbol	imp_units	met_units	imp_displayType	met_displayType	impToMetFactor	defaultOrder	group	longDescription
+curr_W	W	lb/ft	kg/m	1	1	1.48816394	1	Basic Information	Nominal weight.
+curr_A	A	in.^2	mm^2	1	1	645.16	2	Basic Information	Cross-sectional area.
+curr_d	d	in.	mm	1	1	25.4	3	Basic Information	Overall depth of member, or width of shorter leg for angles, or width of the outstanding legs of long legs back-to-back double angles, or the width of the back-to-back legs of short legs back-to-back double angles.
+curr_d_det	d_det	in.	mm	2	1	25.4	61	Detailing Dimensions	Detailing value of member depth.
+curr_Ht	Ht	in.	mm	1	1	25.4	4	Basic Information	Overall depth of square or rectangular HSS.
+curr_h	h	in.	mm	1	1	25.4	5	Basic Information	Depth of the flat wall of square or rectangular HSS.
+curr_OD	OD	in.	mm	1	1	25.4	6	Basic Information	Outside diameter of round HSS or pipe.
+curr_b_f	b_f	in.	mm	1	1	25.4	7	Basic Information	Flange width.
+curr_b_fdet	b_fdet	in.	mm	2	1	25.4	62	Detailing Dimensions	Detailing value of flange width.
+curr_B	B	in.	mm	1	1	25.4	8	Basic Information	Overall width of square or rectangular HSS (the same as B per the 2010 AISC Specification).
+curr_b	b	in.	mm	1	1	25.4	9	Basic Information	Width of the flat wall of square or rectangular HSS, or width of the longer leg for angles, or width of the back-to-back legs of long legs back-to-back double angles, or width of the outstanding legs of short legs back-to-back double angles.
+curr_ID	ID	in.	mm	1	1	25.4	10	Basic Information	Inside diameter of round HSS or pipe.
+curr_t_w	t_w	in.	mm	1	1	25.4	11	Basic Information	Web thickness.
+curr_t_wdet	t_wdet	in.	mm	2	1	25.4	63	Detailing Dimensions	Detailing value of web thickness.
+curr_t_wdet/2	t_wdet/2	in.	mm	2	1	25.4	64	Detailing Dimensions	Detailing value of web thickness divided by 2.
+curr_t_f	t_f	in.	mm	1	1	25.4	12	Basic Information	Flange thickness.
+curr_t_fdet	t_fdet	in.	mm	2	1	25.4	65	Detailing Dimensions	Detailing value of flange thickness.
+curr_t	t	in.	mm	1	1	25.4	13	Basic Information	Thickness of angle leg.
+curr_t_nom	t_nom	in.	mm	1	1	25.4	14	Basic Information	HSS and pipe nominal wall thickness.
+curr_t_des	t_des	in.	mm	1	1	25.4	15	Basic Information	HSS and pipe design wall thickness.
+curr_k_des	k_des	in.	mm	1	1	25.4	16	Basic Information	Design distance from outer face of flange to web toe of fillet.
+curr_k_det	k_det	in.	mm	2	1	25.4	66	Detailing Dimensions	Detailing distance from outer face of flange to web toe of fillet.
+curr_k_1	k_1	in.	mm	2	1	25.4	67	Detailing Dimensions	Detailing distance from center of web to flange toe of fillet.
+curr_x	x	in.	mm	1	1	25.4	26	Flexural Properties	Horizontal distance from designated member edge, as defined in the AISC Steel Construction Manual, to member centroidal axis.
+curr_y	y	in.	mm	1	1	25.4	27	Flexural Properties	Vertical distance from designated member edge, as defined in the AISC Steel Construction Manual, to member centroidal axis.
+curr_e_o	e_o	in.	mm	1	1	25.4	53	Shear Properties	Horizontal distance from designated member edge, as defined in the AISC Steel Construction Manual, to member shear center.
+curr_x_p	x_p	in.	mm	1	1	25.4	28	Flexural Properties	Horizontal distance from designated member edge, as defined in the AISC Steel Construction Manual, to member plastic neutral axis.
+curr_y_p	y_p	in.	mm	1	1	25.4	29	Flexural Properties	Vertical distance from designated member edge, as defined in the AISC Steel Construction Manual, to member plastic neutral axis.
+curr_b_f/2t_f	b_f/2t_f			1	1	1	18	Compression Properties	Slenderness ratio.
+curr_b/t	b/t			1	1	1	19	Compression Properties	Slenderness ratio for single angles.
+curr_b/t_des	b/t_des			1	1	1	20	Compression Properties	Slenderness ratio for square or rectangular HSS.
+curr_h/t_w	h/t_w			1	1	1	21	Compression Properties	Slenderness ratio.
+curr_h/t_des	h/t_des			1	1	1	22	Compression Properties	Slenderness ratio for square or rectangular HSS.
+curr_D/t	D/t			1	1	1	23	Compression Properties	Slenderness ratio for round HSS and pipe, or tee shapes.
+curr_I_x	I_x	in.^4	mm^4	1	1	416231.4256	30	Flexural Properties	Moment of inertia about the x-axis.
+curr_Z_x	Z_x	in.^3	mm^3	1	1	16387.064	31	Flexural Properties	Plastic section modulus about the x-axis.
+curr_S_x	S_x	in.^3	mm^3	1	1	16387.064	32	Flexural Properties	Elastic section modulus about the x-axis.
+curr_r_x	r_x	in.	mm	1	1	25.4	33	Flexural Properties	Radius of gyration about the x-axis.
+curr_I_y	I_y	in.^4	mm^4	1	1	416231.4256	34	Flexural Properties	Moment of inertia about the y-axis.
+curr_Z_y	Z_y	in.^3	mm^3	1	1	16387.064	35	Flexural Properties	Plastic section modulus about the y-axis.
+curr_S_y	S_y	in.^3	mm^3	1	1	16387.064	36	Flexural Properties	Elastic section modulus about the y-axis.
+curr_r_y	r_y	in.	mm	1	1	25.4	37	Flexural Properties	Radius of gyration about the y-axis (with no separation for double angles back-to-back).
+curr_I_z	I_z	in.^4	mm^4	1	1	416231.4256	54	Torsional Properties	Moment of inertia about the z-axis.
+curr_r_z	r_z	in.	mm	1	1	25.4	55	Torsional Properties	Radius of gyration about the z-axis.
+curr_S_z	S_z	in.^3	mm^3	1	1	16387.064	56	Torsional Properties	Elastic section modulus about the z-axis.
+curr_J	J	in.^4	mm^4	1	1	416231.4256	57	Torsional Properties	Torsional moment of inertia.
+curr_C_w	C_w	in.^6	mm^6	1	1	268535866.5	58	Torsional Properties	Warping constant.
+curr_C	C	in.^3	mm^3	1	1	16387.064	59	Torsional Properties	HSS torsional constant.
+curr_W_no	W_no	in.^2	mm^2	1	1	645.16	70	Design Guide 9	Normalized warping function, as used in Design Guide 9.
+curr_S_w1	S_w1	in.^4	mm^4	1	1	416231.4256	71	Design Guide 9	Warping statical moment at point 1 on cross section, as used in Design Guide 9.
+curr_S_w2	S_w2	in.^4	mm^4	1	1	416231.4256	72	Design Guide 9	Warping statical moment at point 2 on cross section, as used in Design Guide 9.
+curr_S_w3	S_w3	in.^4	mm^4	1	1	416231.4256	73	Design Guide 9	Warping statical moment at point 3 on cross section, as used in Design Guide 9.
+curr_Q_f	Q_f	in.^3	mm^3	1	1	16387.064	74	Design Guide 9	Statical moment for a point in the flange directly above the vertical edge of the web, as used in Design Guide 9.
+curr_Q_w	Q_w	in.^3	mm^3	1	1	16387.064	75	Design Guide 9	Statical moment for a point at mid-depth of the cross section, as used in Design Guide 9.
+curr_r_o	r_o	in.	mm	1	1	25.4	60	Torsional Properties	Polar radius of gyration about the shear center.
+curr_H	H			1	1	1	38	Flexural Properties	Flexural constant.
+curr_tan(ALPHA)	tan(ALPHA)			1	1	1	17	Basic Information	Tangent of the angle between the y-y and z-z axes for single angles.
+curr_Q_s	Q_s	in.^4	mm^4	1	1	416231.4256	24	Compression Properties	Reduction factor for slender unstiffened compression elements.
+curr_I_w	I_w	in.^4	mm^4	1	1	416231.4256	39	Flexural Properties	Moment of inertia about the w-axis.
+curr_z_A	z_A	in.	mm	1	1	25.4	40	Flexural Properties	Distance from point A to center of gravity along z-axis. Point A is the center point of the end of the short leg.
+curr_z_B	z_B	in.	mm	1	1	25.4	41	Flexural Properties	Distance from point B to center of gravity along z-axis. Point B is the outside corner where the angle's legs intersect.
+curr_z_C	z_C	in.	mm	1	1	25.4	42	Flexural Properties	Distance from point C to center of gravity along z-axis. Point C is the center point of the end of the long leg.
+curr_w_A	w_A	in.	mm	1	1	25.4	43	Flexural Properties	Distance from point A to center of gravity along w-axis. Point A is the center point of the end of the short leg.
+curr_w_B	w_B	in.	mm	1	1	25.4	44	Flexural Properties	Distance from point B to center of gravity along w-axis. Point B is the outside corner where the angle's legs intersect.
+curr_w_C	w_C	in.	mm	1	1	25.4	45	Flexural Properties	Distance from point C to center of gravity along w-axis. Point C is the center point of the end of the long leg.
+curr_S_wA	S_wA	in.^3	mm^3	1	1	16387.064	46	Flexural Properties	Elastic section modulus about the w-axis at point A on cross section. Point A is the center point of the end of the short leg.
+curr_S_wB	S_wB	in.^3	mm^3	1	1	16387.064	47	Flexural Properties	Elastic section modulus about the w-axis at point B on cross section. Point B is the outside corner where the angle's legs intersect.
+curr_S_wC	S_wC	in.^3	mm^3	1	1	16387.064	48	Flexural Properties	Elastic section modulus about the w-axis at point C on cross section. Point C is the center point of the end of the long leg.
+curr_S_zA	S_zA	in.^3	mm^3	1	1	16387.064	49	Flexural Properties	Elastic section modulus about the z-axis at point A on cross section. Point A is the center point of the end of the short leg.
+curr_S_zB	S_zB	in.^3	mm^3	1	1	16387.064	50	Flexural Properties	Elastic section modulus about the z-axis at point B on cross section. Point B is the outside corner where the angle's legs intersect.
+curr_S_zC	S_zC	in.^3	mm^3	1	1	16387.064	51	Flexural Properties	Elastic section modulus about the z-axis at point C on cross section. Point C is the center point of the end of the long leg.
+curr_r_ts	r_ts	in.	mm	1	1	25.4	25	Compression Properties	Effective radius of gyration.
+curr_h_o	h_o	in.	mm	1	1	25.4	52	Flexural Properties	Distance between the flange centroids.
+curr_P_A	P_A	in.	mm	1	1	25.4	68	Design Guide 19	Shape perimeter minus one flange surface, as used in Design Guide 19.
+curr_P_B	P_B	in.	mm	1	1	25.4	69	Design Guide 19	Shape perimeter, as used in Design Guide 19.
+hist_A	A	in.^2	mm^2	1	1	645.16	77	Basic Information	Cross-sectional area.
+hist_d	d	in.	mm	1	1	25.4	78	Basic Information	Overall depth of member (longer leg for angles).
+hist_t_w	t_w	in.	mm	1	1	25.4	85	Basic Information	Web thickness.
+hist_t_w/2	t_w/2	in.	mm	1	1	25.4	125	Basic Information	Web half-thickness.
+hist_b_f	b_f	in.	mm	1	1	25.4	82	Basic Information	Flange width.
+hist_t_f	t_f	in.	mm	1	1	25.4	86	Basic Information	Flange thickness.
+hist_T	T	in.	mm	1	1	25.4	128	Detailing Dimensions	Detailing depth between the web toes of the fillets.
+hist_k	k	in.	mm	1	1	25.4	129	Detailing Dimensions	Detailing distance from outer face of flange to web toe of fillet.
+hist_k_1	k_1	in.	mm	1	1	25.4	121	Detailing Dimensions	Detailing distance from center of web to flange toe of fillet.
+hist_W	W	lb/ft	kg/m	1	1	1.48816394	76	Basic Information	Weight.
+hist_b_f/2t_f	b_f/2t_f			1	1	1	92	Compression Properties	Slenderness ratio
+hist_h/t_w	h/t_w			1	1	1	94	Compression Properties	Slenderness ratio
+hist_F_y'''	F'''_y	ksi	MPa	1	1	6.894759087	130	Stress Properties	The theoretical maximum yield stress based on the web depth-thickness ratio (h / tw) above which the web of a column is considered a slender element.
+hist_X_1	X_1	ksi	MPa	1	1	6.894759087	131	Miscellaneous	Beam buckling factor.
+hist_X_2	X_2	1/ksi^2	1/MPa^2	1	1	0.021035934	132	Miscellaneous	Beam buckling factor.
+hist_I_x	I_x	in.^4	mm^4	1	1	416231.4256	101	Flexural Properties	Moment of inertia about the x-axis
+hist_Z_x	Z_x	in.^3	mm^3	1	1	16387.064	102	Flexural Properties	Plastic section modulus about the x-axis
+hist_S_x	S_x	in.^3	mm^3	1	1	16387.064	103	Flexural Properties	Elastic section modulus about the x-axis
+hist_r_x	r_x	in.	mm	1	1	25.4	104	Flexural Properties	Radius of gyration about the x-axis
+hist_y	y	in.	mm	1	1	25.4	98	Flexural Properties	Vertical distance from designated member edge, as defined in the AISC Steel Construction Manual, to centroidal axis.
+hist_y_p	y_p	in.	mm	1	1	25.4	100	Flexural Properties	Vertical distance from designated member edge, as defined in the AISC Steel Construction Manual, to plastic neutral axis.
+hist_I_y	I_y	in.^4	mm^4	1	1	416231.4256	105	Flexural Properties	Moment of inertia about the y-axis.
+hist_Z_y	Z_y	in.^3	mm^3	1	1	16387.064	106	Flexural Properties	Plastic section modulus about the y-axis.
+hist_S_y	S_y	in.^3	mm^3	1	1	16387.064	107	Flexural Properties	Elastic section modulus about the y-axis
+hist_r_y	r_y	in.	mm	1	1	25.4	108	Flexural Properties	Radius of gyration about the y-axis
+hist_x	x	in.	mm	1	1	25.4	97	Flexural Properties	Horizontal distance from designated member edge, as defined in the AISC Steel Construction Manual, to centroidal axis.
+hist_x_p	x_p	in.	mm	1	1	25.4	99	Flexural Properties	Horizontal distance from designated member edge, as defined in the AISC Steel Construction Manual, to plastic neutral axis.
+hist_r_z	r_z	in.	mm	1	1	25.4	110	Torsional Properties	Radius of gyration about the z-axis.
+hist_maxf	maxf	in.	mm	1	1	25.4	133	Miscellaneous	Maximum flange fastener.
+hist_Grip	Grip	in.	mm	1	1	25.4	134	Miscellaneous	Grip.
+hist_e_o	e_o	in.	mm	1	1	25.4	109	Shear Properties	Horizontal distance from designated edge of member to shear center location.
+hist_Q_s36	Q_s36			1	1	1	135	Compression Properties	Reduction factor for slender unstiffened compression elements in members other than double angles for 36 ksi material.
+hist_Q_s50	Q_s50			1	1	1	136	Compression Properties	Reduction factor for slender unstiffened compression elements in members other than double angles for 50 ksi material.
+hist_Q_s36c	Q_s36c			1	1	1	137	Compression Properties	Reduction factor for slender unstiffened compression elements for 36 ksi material with angles in contact.
+hist_Q_s50c	Q_s50c			1	1	1	138	Compression Properties	Reduction factor for slender unstiffened compression elements for 50 ksi material with angles in contact.
+hist_Q_s36s	Q_s36s			1	1	1	139	Compression Properties	Reduction factor for slender unstiffened compression elements for 36 ksi material with angles separated.
+hist_Q_s50s	Q_s50s			1	1	1	140	Compression Properties	Reduction factor for slender unstiffened compression elements for 50 ksi material with angles separated.
+hist_A_stem	A_stem	in.^2	mm^2	1	1	645.16	141	Basic Information	Stem cross-sectional area for a tee.
+hist_tan(ALPHA)	tan(ALPHA)			1	1	1	91	Basic Information	Tangent of the angle between the y-y and z-z axes for single angles.
+hist_t_wstem	t_wstem	in.	mm	1	1	25.4	142	Basic Information	Stem thickness for a tee or Z-section.
+hist_t_wstem/2	t_wstem/2	in.	mm	1	1	25.4	143	Basic Information	Stem half-thickness for a tee.
+hist_OD	OD	in.	mm	1	1	25.4	81	Basic Information	Outside diameter.
+hist_ID	ID	in.	mm	1	1	25.4	84	Basic Information	Inside diameter
+hist_t_wall	t_wall	in.	mm	1	1	25.4	144	Basic Information	Wall thickness.
+hist_J	J	in.^4	mm^4	1	1	416231.4256	112	Torsional Properties	Torsional moment of inertia.
+hist_t	t	in.	mm	1	1	25.4	87	Basic Information	Thickness.
+hist_I'_y	I'_y	in.^4	mm^4	1	1	416231.4256	145	Flexural Properties	Moment of inertia about the y-y axis for bearing piles.
+hist_S'_y	S'_y	in.^3	mm^3	1	1	16387.064	146	Flexural Properties	Elastic section modulus about the y-y axis for bearing piles.
+hist_r'_y	r'_y	in.	mm	1	1	25.4	147	Flexural Properties	Radius of gyration about the y-y axis for bearing piles.
+hist_sched	sched			1	1	1	148	Miscellaneous	ASA Schedule Number.
+hist_A_net36	A_net36	in.^2	mm^2	1	1	645.16	149	Theoretical Properties	Theoretical net area for ASTM A36 material based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Manual.
+hist_d_1A36	d_1A36	in.	mm	1	1	25.4	150	Theoretical Properties	Theoretical depth of tee for ASTM A36 material based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Manual.
+hist_I_xA36	I_xA36	in.^4	mm^4	1	1	416231.4256	151	Theoretical Properties	Theoretical moment of inertia about the x-x axis for ASTM A36 material based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Manual.
+hist_S_xA36	S_xA36	in.^3	mm^3	1	1	16387.064	152	Theoretical Properties	Elastic section modulus about the x-x axis based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Manual.
+hist_r_xA36	r_xA36	in.	mm	1	1	25.4	153	Theoretical Properties	Theoretical radius of gyration about the x-x axis for ASTM A36 material based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Manual.
+hist_y_1A36	y_1A36	in.	mm	1	1	25.4	154	Theoretical Properties	Theoretical distance from the neutral axis to the centroid of a section about the x-x axis for ASTM A36 material based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Manual.
+hist_r_yA36	r_yA36	in.	mm	1	1	25.4	155	Theoretical Properties	Theoretical radius of gyration about the y-y axis for ASTM A36 material based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Manual.
+hist_A_netASTM	A_netASTM	in.^2	mm^2	1	1	645.16	156	Theoretical Properties	Theoretical net area for ASTM A242, A440 and A441 materials based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Manual.
+hist_d_1ASTM	d_1ASTM	in.	mm	1	1	25.4	157	Theoretical Properties	Theoretical depth of tee for ASTM A242, A440 and A441 materials based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Manual.
+hist_I_xASTM	I_xASTM	in.^4	mm^4	1	1	416231.4256	158	Theoretical Properties	Theoretical moment of inertia about the x-x axis for ASTM A242, A440 and A441 materials based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Manual.
+hist_S_xASTM	S_xASTM	in.^3	mm^3	1	1	16387.064	159	Theoretical Properties	Theoretical section modulus about the x-x axis for ASTM A242, A440 and A441 materials based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Manual.
+hist_r_xASTM	r_xASTM	in.	mm	1	1	25.4	160	Theoretical Properties	Theoretical radius of gyration about the x-x axis for ASTM A242, A440 and A441 materials based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Manual.
+hist_y_1ASTM	y_1ASTM	in.	mm	1	1	25.4	161	Theoretical Properties	Theoretical distance from the neutral axis to the centroid of a section about the x-x axis for ASTM A242, A440 and A441 materials based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC  Steel Construction Manual.
+hist_r_yASTM	r_yASTM	in.	mm	1	1	25.4	162	Theoretical Properties	Theoretical radius of gyration about the y-y axis for ASTM A242, A440 and A441 materials based on Section 1.9.1 of the AISC Specification in the 6th Edition AISC Steel Construction Manual.
+hist_d/t	d/t			1	1	1	95	Compression Properties	Slenderness ratio.
+hist_r_y0	r_y0	in.	mm	1	1	25.4	163	Torsional Properties	Polar radius of gyration.
+hist_r_y1/4	r_y1/4	in.	mm	1	1	25.4	164	Flexural Properties	Radius of gyration about the y-y axis for angles separated by 1/4 in.
+hist_r_y3/8	r_y3/8	in.	mm	1	1	25.4	165	Flexural Properties	Radius of gyration about the y-y axis for angles separated by 3/8 in.
+hist_r_y1/2	r_y1/2	in.	mm	1	1	25.4	166	Flexural Properties	Radius of gyration about the y-y axis for angles separated by 1/2 in.
+hist_r_y5/8	r_y5/8	in.	mm	1	1	25.4	167	Flexural Properties	Radius of gyration about the y-y axis for angles separated by 5/8 in.
+hist_r_y3/4	r_y3/4	in.	mm	1	1	25.4	168	Flexural Properties	Radius of gyration about the y-y axis for angles separated by 3/4 in.
+hist_d/A_f	d/A_f	1/in.	1/mm	1	1	0.039370079	169	Miscellaneous	Depth divided by flange area.
+hist_r_T	r_T	in.	mm	1	1	25.4	170	Flexural Properties	Radius of gyration of a section comprising the compression flange plus one-third of the compression web area, taken about an axis in the plane of the web.
+hist_F''_y	F''_y	ksi	MPa	1	1	6.894759087	171	Stress Properties	Theoretical maximum yield stress based on the width-thickness ratio of the web, beyond which a particular shape is not "compact."
+hist_C_w	C_w	in.^6	mm^6	1	1	268535866.5	113	Torsional Properties	Warping constant for a section.
+hist_F'_y	F'_y	ksi	MPa	1	1	6.894759087	172	Stress Properties	Theoretical maximum yield stress based on the width-thickness ratio of one-half the unstiffened compression flange, beyond which a particular shape is not "compact."
+hist_C'_c50	C'_c50			1	1	1	173	Compression Properties	Column slenderness ratio dividing elastic and inelastic buckling, modified to account for effective width of wide compression elements for 50 ksi material.
+hist_C'_c36	C'_c36			1	1	1	174	Compression Properties	Column slenderness ratio dividing elastic and inelastic buckling, modified to account for effective width of wide compression elements for 36 ksi material.
+hist_a	a	in.	mm	1	1	25.4	175	Torsional Properties	Torsion property. a = sqrt(E*Cw/(G*J))
+hist_W_no	W_no	in.^2	mm^2	1	1	645.16	122	Design Guide 9	Normalized warping constant.
+hist_S_w	S_w	in.^4	mm^4	1	1	416231.4256	127	Design Guide 9	Warping statical moment.
+hist_Q_f	Q_f	in.^3	mm^3	1	1	16387.064	123	Design Guide 9	Statical moment at point in flange.
+hist_Q_w	Q_w	in.^3	mm^3	1	1	16387.064	124	Design Guide 9	Statical moment at mid-depth of the section.
+hist_B	B	in.	mm	1	1	25.4	83	Basic Information	Overall width of member (shorter leg for angles).
+hist_Ht/t	Ht/t			1	1	1	126	Compression Properties	Slenderness ratio for HSS.
+hist_Ht	Ht	in.	mm	1	1	25.4	79	Basic Information	Depth of HSS.
+hist_t_nom	t_nom	in.	mm	1	1	25.4	88	Basic Information	HSS nominal wall thickness.
+hist_t_des	t_des	in.	mm	1	1	25.4	89	Basic Information	HSS design wall thickness.
+hist_b/t	b/t			1	1	1	176	Compression Properties	Slenderness ratio for HSS.
+hist_C	C	in.^3	mm^3	1	1	16387.064	114	Torsional Properties	HSS torsional constant.
+hist_r_o	r_o	in.	mm	1	1	25.4	115	Torsional Properties	Polar radius of gyration about the shear center.
+hist_H	H			1	1	1	80	Flexural Properties	Flexural constant.
+hist_d_det	d_det	in.	mm	2	1	25.4	116	Detailing Dimensions	Detailing value of member depth.
+hist_b_fdet	b_fdet	in.	mm	2	1	25.4	117	Detailing Dimensions	Detailing value of flange width.
+hist_t_wdet	t_wdet	in.	mm	2	1	25.4	118	Detailing Dimensions	Detailing value of web thickness.
+hist_t_fdet	t_fdet	in.	mm	2	1	25.4	119	Detailing Dimensions	Detailing value of flange thickness.
+hist_k_des	k_des	in.	mm	1	1	25.4	90	Basic Information	Design distance from outer face of flange to web toe of fillet.
+hist_k_det	k_det	in.	mm	2	1	25.4	120	Detailing Dimensions	Detailing distance from outer face of flange to web toe of fillet.
+hist_B/t	B/t			1	1	1	93	Compression Properties	Slenderness ratio for HSS.
+hist_S_z	S_z	in.^3	mm^3	1	1	16387.064	111	Torsional Properties	Elastic section modulus about the z-axis for single angles.
+hist_Q_s	Q_s			1	1	1	96	Compression Properties	Reduction factor for slender unstiffened compression elements.
