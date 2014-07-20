@@ -13,6 +13,7 @@
 		E70E54B21958F3D400F42655 /* Shapes14.txt in Resources */ = {isa = PBXBuildFile; fileRef = E70E54AF1958F3D400F42655 /* Shapes14.txt */; };
 		E70E54B31958F3D400F42655 /* ShapesLRFD3.txt in Resources */ = {isa = PBXBuildFile; fileRef = E70E54B01958F3D400F42655 /* ShapesLRFD3.txt */; };
 		E73E7E1C197B1FE5005F3DCB /* Properties.txt in Resources */ = {isa = PBXBuildFile; fileRef = E73E7E1B197B1FE5005F3DCB /* Properties.txt */; };
+		E78D1377197C1A450011D7FD /* AW_PropertyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E78D1376197C1A450011D7FD /* AW_PropertyDescription.m */; };
 		E7EEF10919205AF70075D69B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EEF10819205AF70075D69B /* Foundation.framework */; };
 		E7EEF10B19205AF70075D69B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EEF10A19205AF70075D69B /* CoreGraphics.framework */; };
 		E7EEF10D19205AF70075D69B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EEF10C19205AF70075D69B /* UIKit.framework */; };
@@ -51,6 +52,8 @@
 		E70E54AF1958F3D400F42655 /* Shapes14.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Shapes14.txt; sourceTree = "<group>"; };
 		E70E54B01958F3D400F42655 /* ShapesLRFD3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShapesLRFD3.txt; sourceTree = "<group>"; };
 		E73E7E1B197B1FE5005F3DCB /* Properties.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Properties.txt; sourceTree = "<group>"; };
+		E78D1375197C1A450011D7FD /* AW_PropertyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AW_PropertyDescription.h; sourceTree = "<group>"; };
+		E78D1376197C1A450011D7FD /* AW_PropertyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AW_PropertyDescription.m; sourceTree = "<group>"; };
 		E7EEF10519205AF70075D69B /* AW_Steel Shapes Database Import Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AW_Steel Shapes Database Import Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EEF10819205AF70075D69B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E7EEF10A19205AF70075D69B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -190,6 +193,8 @@
 				E7EEF15719205FB60075D69B /* AW_Shape.m */,
 				E7EEF15919205FB60075D69B /* AW_Property.h */,
 				E7EEF15A19205FB60075D69B /* AW_Property.m */,
+				E78D1375197C1A450011D7FD /* AW_PropertyDescription.h */,
+				E78D1376197C1A450011D7FD /* AW_PropertyDescription.m */,
 			);
 			name = "Core Data Objects";
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				E7EEF11B19205AF70075D69B /* AW_AppDelegate.m in Sources */,
 				E7EEF15B19205FB60075D69B /* AW_Property.m in Sources */,
 				E7EEF16119205FB70075D69B /* AW_ShapeFamily.m in Sources */,
+				E78D1377197C1A450011D7FD /* AW_PropertyDescription.m in Sources */,
 				E7EEF15E19205FB60075D69B /* AW_Database.m in Sources */,
 				E7EEF15819205FB60075D69B /* AW_Shape.m in Sources */,
 				E7EEF11719205AF70075D69B /* main.m in Sources */,

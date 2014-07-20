@@ -10,13 +10,29 @@
 #import "AW_Database.h"
 #import "AW_ShapeFamily.h"
 #import "AW_Shape.h"
+#import "AW_PropertyDescription.h"
 #import "AW_Property.h"
+
+@interface AW_AppDelegate ()
+
+@property (nonatomic, strong) NSDictionary *propertyDictionary;
+
+@end
 
 @implementation AW_AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+- (NSDictionary *)propertyDictionary
+{
+    if (!_propertyDictionary) {
+        _propertyDictionary = [self createPropertyDictionary];
+    }
+    
+    return _propertyDictionary;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -330,23 +346,29 @@ forManagedObjectWithName:(NSString *) nameOfObject
     } //end for
     
     // Create properties
-    NSDictionary *propertyDictionary = [self createPropertyDictionary];
+    NSMutableSet *propertyDescriptionSet = [NSMutableSet set];  // Holds propertyDescriptions until we assign it to shape family
     
     for (int col = FIRST_PROPERTY_INDEX; col < [attributeNames count]; col+=2) {
         NSString *propertyKey = [attributeNames[col] stringByReplacingOccurrencesOfString:@"imp_" withString:@""];
         propertyKey = [propertyKey stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];   // Sanitize propertyKey
         
         NSString *impValue = fields[col];
-        NSString *metValue = fields[col+1];
         
         // Skip blank field
         if ([impValue isEqualToString:@""]) {
             continue;
         }
         
-        [self createPropertyWithKey:propertyKey impValue:impValue metValue:metValue forShape:entry withPropertyDictionary:propertyDictionary];
-        
+        // Create property and add to shape
+        [self createPropertyWithKey:propertyKey impValue:impValue forShape:entry withPropertyDictionary:self.propertyDictionary];
+    
+        // Add property description to set
+        AW_PropertyDescription *propertyDescsription = self.propertyDictionary[propertyKey];
+        [propertyDescriptionSet addObject:propertyDescsription];    // Because this is a set, it will not add duplicates
     }
+    
+    // Add property description set to shape family
+    shapeFamily.propertyDescriptions = [propertyDescriptionSet copy];
     
     //NSLog(@"Created object: %@", entry);
     
@@ -358,47 +380,20 @@ forManagedObjectWithName:(NSString *) nameOfObject
     
 }
 
-- (void)createPropertyWithKey:(NSString *)key impValue: (id)impValue metValue: (id)metValue forShape:(AW_Shape *)shape withPropertyDictionary:(NSDictionary *)propertyDictionary
+- (void)createPropertyWithKey:(NSString *)key impValue: (id)impValue forShape:(AW_Shape *)shape withPropertyDictionary:(NSDictionary *)propertyDictionary
 {
-    // Create property
-    NSArray *propertyAttributes = propertyDictionary[@"header"];
-    NSArray *propertyValues = propertyDictionary[key];
+    // Create AW_Property object
+    AW_Property *property = [NSEntityDescription insertNewObjectForEntityForName:@"AW_Property" inManagedObjectContext:self.managedObjectContext];
     
-    AW_Property *entry = [NSEntityDescription insertNewObjectForEntityForName:@"AW_Property" inManagedObjectContext:self.managedObjectContext];
-    NSDictionary *entityAttributes = [[entry entity] attributesByName];
-    
-    
-    // Set attributes
-    for (int index = 0; index < [propertyAttributes count]; index++) {
-        
-        NSString *value = propertyValues[index];
-        NSString *propertyAttributeKey = propertyAttributes[index];
-        propertyAttributeKey = [propertyAttributeKey stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]]; // Sanitize key
-        NSAttributeDescription *attributeDescription = [entityAttributes objectForKey:propertyAttributeKey];
-        NSString *attributeClass = [attributeDescription attributeValueClassName];
-        
-        // Add field to entry
-        if ([attributeClass isEqualToString:@"NSNumber"]) {
-            [entry setValue:[NSNumber numberWithInt:[value intValue]] forKey:propertyAttributeKey];
-        }
-        else if ([attributeClass isEqualToString:@"NSDecimalNumber"]) {
-            [entry setValue:[[NSDecimalNumber alloc] initWithString:value] forKey:propertyAttributeKey];
-        }
-        else if ([attributeClass isEqualToString:@"NSString"]) {
-            [entry setValue:value forKey:propertyAttributeKey];
-        }
-        else {
-            // This is the transformable type. Special processing is required.
-        } //end else
-    }
+    // Set propertyDescription
+    property.propertyDescription = propertyDictionary[key];
     
     // Set property value
-    [entry setValue:[[NSDecimalNumber alloc]initWithString:impValue] forKeyPath:@"imp_value"];
-    [entry setValue:[[NSDecimalNumber alloc]initWithString:metValue] forKeyPath:@"met_value"];
-
+    [property setValue:[[NSDecimalNumber alloc]initWithString:impValue] forKeyPath:@"imp_value"];
     
     // Set shape
-    entry.shape = shape;
+    property.shape = shape;
+    
 }
 
 - (NSDictionary *)createPropertyDictionary
@@ -425,16 +420,51 @@ forManagedObjectWithName:(NSString *) nameOfObject
     
     // Read in header
     headerLine = lines[0];
-    [propertyDictionary setObject:[headerLine componentsSeparatedByString:@"\t"] forKey:@"header"];
+    headerLine = [headerLine stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]]; // Sanitize header line
+    NSArray *headerLineComponents = [headerLine componentsSeparatedByString:@"\t"];
+    
+    [propertyDictionary setObject: headerLineComponents forKey:@"header"];
     
     // Process entries
     for (int row = 1; row < [lines count]; row++) {
         
         line = lines[row];
         attributes = [line componentsSeparatedByString:@"\t"];
+        
         key = attributes[[propertyDictionary[@"header"]indexOfObject:@"key"]];
         
-        [propertyDictionary setObject:attributes forKey:key];
+        
+        // Create and add AW_PropertyDescription object to dictionary if it does not already exist
+        if ([propertyDictionary objectForKey:key] == nil) {
+            AW_PropertyDescription *propertyDescription = [NSEntityDescription insertNewObjectForEntityForName:@"AW_PropertyDescription" inManagedObjectContext:self.managedObjectContext];
+            NSDictionary *entityAttributes = [[propertyDescription entity] attributesByName];
+            
+            // Set attributes of AW_PropertyDescription
+            for (NSString *attributeName in headerLineComponents) {
+                
+                NSAttributeDescription *attribute = [entityAttributes objectForKey:attributeName];
+                NSString *attributeClass = [attribute attributeValueClassName];
+                NSString *value = attributes[[headerLineComponents indexOfObject:attributeName]];
+                
+                // Add value to propertyDescription
+                if ([attributeClass isEqualToString:@"NSNumber"]) {
+                    [propertyDescription setValue:[NSNumber numberWithInt:[value intValue]] forKey:attributeName];
+                }
+                else if ([attributeClass isEqualToString:@"NSDecimalNumber"]) {
+                    [propertyDescription setValue:[[NSDecimalNumber alloc]initWithString:value] forKeyPath:attributeName];
+                }
+                else if ([attributeClass isEqualToString:@"NSString"]) {
+                    [propertyDescription setValue:value forKey:attributeName];
+                }
+                else {
+                    // Special processing is needed
+                } //end else
+            }
+            
+            [propertyDictionary setObject:propertyDescription forKey:key];
+        }
+        
+        
     } //end for
     
     return [propertyDictionary copy];

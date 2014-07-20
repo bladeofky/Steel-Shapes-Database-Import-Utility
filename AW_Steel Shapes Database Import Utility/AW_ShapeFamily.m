@@ -21,5 +21,6 @@
 @dynamic group;
 @dynamic database;
 @dynamic shapes;
+@dynamic propertyDescriptions;
 
 @end

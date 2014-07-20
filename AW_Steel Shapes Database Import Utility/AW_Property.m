@@ -12,17 +12,10 @@
 
 @implementation AW_Property
 
-@dynamic defaultOrder;
-@dynamic imp_displayType;
-@dynamic met_displayType;
-@dynamic imp_units;
 @dynamic imp_value;
 @dynamic key;
-@dynamic met_units;
-@dynamic met_value;
-@dynamic symbol;
 @dynamic shape;
-@dynamic longDescription;
-@dynamic group;
+@dynamic propertyDescription;
+
 
 @end
